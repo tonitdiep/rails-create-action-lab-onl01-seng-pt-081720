@@ -28,7 +28,7 @@ class StudentsController < ApplicationController
 
     @student = Student.new(first_name: params[:first_name], last_name: params[:last_name])
     if @student.save
-      redirect_to student_path(@student)
+      redirect_to student_path(student)
     else
       render :new
     end
